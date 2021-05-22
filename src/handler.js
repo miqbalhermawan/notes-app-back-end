@@ -19,7 +19,7 @@ const addNoteHandler = (request, h) => {
   if (isSuccess) {
     const response = h.response({
       status: 'success',
-      message: 'Catatan berhasil di tambahkan',
+      message: 'Catatan berhasil ditambahkan',
       data: {
         noteId: id,
       },
@@ -30,7 +30,7 @@ const addNoteHandler = (request, h) => {
 
   const response = h.response({
     status: 'fail',
-    message: 'Catatan gagal di tambahkan',
+    message: 'Catatan gagal ditambahkan',
   });
 
   response.header('Access-Control-Allow-Origin', '*');
@@ -59,7 +59,6 @@ const getNoteByIdHandler = (request, h) => {
       },
     };
   }
-
   const response = h.response({
     status: 'fail',
     message: 'Catatan tidak ditemukan',
